@@ -1209,7 +1209,7 @@
     display: none;
     left: 0;
     box-shadow: 0 0 3px #888;
-    animation: navbarMobileView linear 0.3s;
+    animation: navbarMobileView linear 0.4s;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -1259,8 +1259,10 @@
 }
 
 .sub-mobile-category-item__link-icon {
-    position: fixed;
-    left: 65%;
+    position: absolute;
+    left: 90%;
+    font-weight: 100;
+    
 }
 .overlay_mobile_sub {
     position: fixed;
