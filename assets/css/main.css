@@ -112,7 +112,19 @@
     display: block;
 }
 
+.mobile__navbar-items {
+    display: none;
+}
+
 .header__navbar-user-img {
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+
+}
+
+.mobile__navbar-user-img {
     width: 25px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -127,6 +139,17 @@
     
 
 }
+
+.mobile__navbar-user-name {
+    margin-left: 4px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: white;
+    
+    
+
+}
+
 
 .header__navbar-user-menu {
     list-style: none;
@@ -169,6 +192,7 @@
     
 }
 
+.mobile__navbar-user-item a,
 .header__navbar-user-item a {
     text-decoration: none;
     color: #666;
@@ -197,7 +221,7 @@
 
 }
 
-.header__navbar-items, .header__navbar-items-notifi, .header__navbar-items-help {
+.header__navbar-items, .header__navbar-items-notifi, .header__navbar-items-help, .mobile__navbar-user-item {
     display: inline-block;
     font-size: 1.4rem;
     color: white;
@@ -613,6 +637,19 @@
     bottom: 0;
     background:rgba(0, 0, 0, 0.3);
     display: none;
+    z-index: 2;
+    
+}
+
+.overlay_mobile_login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 2;
     
 }
 
@@ -1155,8 +1192,149 @@
     
 
 }
+/* sub category */
+
+.sub-mobile-category__heading-icon {
+    display: none;
+}
+.sub-mobile-category {
+    background-color: #fff;
+    position: fixed;
+    top: var(--headerHeight);
+    z-index: 3;
+    height: 55%;
+    width: 55%;
+    display: none;
+    left: 0;
+    box-shadow: 0 0 3px #888;
+    animation: navbarMobileView linear 0.3s;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.sub-mobile-category-list {
+    padding-left: 0;
+    list-style: none;
+    padding-bottom: 8px;
+    margin-left: 8px;
+
+}
+
+.sub-mobile-category-item__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.sub-mobile-category-icon {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.sub-mobile-category-item::before {
+    content: "";
+    border-top: 1px solid #e1e1e1;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+}
+
+.sub-mobile-category-item:first-child .sub-mobile-category-item__link {
+    color: #20bf55;
+}
+
+.sub-mobile-category-item__link {
+    text-decoration: none;
+    color: #36414a;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+    right: 0;
+}
+.overlay_mobile_sub {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 0.3);
+    display: none;
+    
+}
+
+@keyframes navbarMobileView {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+        
+    }
+
+    to {
+        opacity: 1;
+       
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes nav2barMobileView {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+        
+    }
+
+    to {
+        opacity: 1;
+       
+        transform: translateX(0);
+    }
+    
+}
+.mobile__navbar-user-menu-sub  { 
+    display: none;
+}
+
+ .header-mobile-login-checkbox:checked ~ .mobile__navbar-user-menu-sub {
+     display: block;
+ }
+
+ .header-mobile-login-checkbox:checked ~ .overlay_mobile_login {
+    display: block;
+}
+.header-mobile-category-checkbox:checked ~ .sub-mobile-category {
+    display: block;
+}
+
+.header-mobile-category-checkbox:checked ~ .overlay_mobile_sub {
+    display: block;
+}
 
 
+
+
+.mobile__navbar-user-menu {
+    list-style: none;
+    position: absolute;
+    top: var(--headerHeight);
+    right: 0;
+    background: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 0 3px #888;
+    width: 160px;
+    margin-top: 0;
+    z-index: 2;
+    display: block;
+    padding-left: 0px;
+    animation: nav2barMobileView linear 0.3s;
+    
+}
+
+/*  */
 .category {
     background: white;
     position: relative;
