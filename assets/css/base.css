@@ -1,7 +1,7 @@
 :root {
     --text-color: #333;
     --navbar-height: 48px;
-    --headerHeight: 120px;
+    --headerHeight: 110px;
     --headerWithsearch: calc(var(--headerHeight) - var(--navbar-height));
     --header-sort-height-bar: 46px;
 

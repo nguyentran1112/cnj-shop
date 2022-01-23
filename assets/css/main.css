@@ -1619,7 +1619,7 @@
 }
 
 .home-product-item-price-old {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color:#666;
     text-decoration: line-through;
     margin-left: 10px;
@@ -1628,7 +1628,7 @@
 }
 
 .home-product-item-price-current {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #20bf55;
     margin-left: 10px;
    
@@ -1644,12 +1644,12 @@
 }
 
 .home-product-item-like {
-   font-size: 1.3rem;
+   font-size: 1.2rem;
 
 }
 
 .home-product-item-rate {
-    font-size: 1rem;
+    font-size: 0.8rem;
     transform: scale(0.8);
     transform-origin: right;
     color: #888;
